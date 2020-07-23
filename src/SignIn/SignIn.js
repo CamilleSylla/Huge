@@ -79,7 +79,7 @@ export default function SignInSide() {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Adresse Email"
               name="email"
               autoComplete="email"
               autoFocus
@@ -90,7 +90,7 @@ export default function SignInSide() {
               required
               fullWidth
               name="password"
-              label="Password"
+              label="Mot de Passe"
               type="password"
               id="password"
               autoComplete="current-password"
