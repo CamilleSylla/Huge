@@ -5,6 +5,7 @@ import './App.css';
 
 const SignIn = lazy(() => import('./SignIn/SignIn'));
 const SignUp = lazy (() => import('./SignUp/SignUp'));
+const Dashboard = lazy (() => import('./Dashboard/Dashboard'))
 
 class App extends React.Component {
   constructor () {
@@ -22,6 +23,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={SignIn}/>
           <Route path="/signup" component={SignUp}/>
+          <Route path="/dashboard" component={Dashboard}/>
         </Switch>
       </Suspense>
     </Router>
