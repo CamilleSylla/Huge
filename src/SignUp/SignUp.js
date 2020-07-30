@@ -133,6 +133,7 @@ class SignUp extends React.Component {
               fullWidth
               variant="contained"
               color="primary"
+              href="http://localhost:3000/"
               onClick={this.onSubmitSignUp}
               className={classes.submit}
             >

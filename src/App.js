@@ -12,8 +12,30 @@ class App extends React.Component {
     super();
     this.state={
       route: 'signin',
-      isSignedIn: false
+      isSignedIn: false,
+      user: {
+        id: '',
+        email: '',
+        joined: '',
+        name: ''
+      }
     }
+  }
+  loadUser =(data) => {
+    this.setState({user :{
+            id: data.id,
+            name: data.name,
+            email: data.email,
+            joined: data.joined
+    }})
+  }
+  onRouteChange = (route) => {
+    if (route === 'signout') {
+      this.setState({isSignedIn : false})
+    } else if (route === 'dashboard') {
+      this.setState({isSignedIn: true})
+    }
+    this.setState({route: route});
   }
 
   render() {
