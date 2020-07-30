@@ -34,10 +34,22 @@ class SignUp extends React.Component {
     super(props);
     this.state = {
       signUpEmail: "",
-      signUpPassword:""
+      signUpPassword:"",
+      signUpPrenom: "",
+      signUpNom: ""
     }
     this.onEmailChange = this.onEmailChange.bind(this);
     this.onPasswordChange = this.onPasswordChange.bind(this);
+    this.onPrenomChange = this.onPrenomChange.bind(this);
+    this.onNomChange = this.onNomChange.bind(this);
+  }
+
+  onNomChange =(event) => {
+    this.setState({signUpNom: event.target.value})
+  }
+
+  onPrenomChange = (event) => {
+    this.setState({signUpPrenom: event.target.value})
   }
  
   onEmailChange = (event) => {
@@ -75,13 +87,14 @@ class SignUp extends React.Component {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  autoComplete="fname"
-                  name="firstName"
+                  autoComplete="nom"
+                  name="nom"
                   variant="outlined"
                   required
                   fullWidth
-                  id="firstName"
-                  label={"Prénom"}
+                  id="nom"
+                  label="Nom"
+                  onChange={this.on}
                   autoFocus
                 />
               </Grid>
@@ -90,9 +103,9 @@ class SignUp extends React.Component {
                   variant="outlined"
                   required
                   fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="Nom"
+                  id="prenom"
+                  label="prenom"
+                  name="Prénom"
                   autoComplete="lname"
                 />
               </Grid>
