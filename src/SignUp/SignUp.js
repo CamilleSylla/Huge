@@ -43,7 +43,6 @@ class SignUp extends React.Component {
     this.onPrenomChange = this.onPrenomChange.bind(this);
     this.onNomChange = this.onNomChange.bind(this);
   }
-
   onNomChange =(event) => {
     this.setState({signUpNom: event.target.value})
   }
@@ -58,16 +57,17 @@ class SignUp extends React.Component {
   onPasswordChange = (event) => {
     this.setState({signUpPassword: event.target.value})
   }
-  onSubmitSignUp = () => {
+  onSubmitSignUp = (event) => {
     fetch('http://localhost:3001/signup', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         email: this.state.signUpEmail,
-        password: this.state.signUpPassword
+        password: this.state.signUpPassword,
+        nom: this.state.signUpNom,
+        prenom: this.state.signUpPrenom
       })
-    })
-    console.log(this.state);
+    }).then(alert('done'))
   }
 
   
@@ -94,7 +94,7 @@ class SignUp extends React.Component {
                   fullWidth
                   id="nom"
                   label="Nom"
-                  onChange={this.on}
+                  onChange={this.onNomChange}
                   autoFocus
                 />
               </Grid>
@@ -106,6 +106,7 @@ class SignUp extends React.Component {
                   id="prenom"
                   label="prenom"
                   name="Prénom"
+                  onChange={this.onPrenomChange}
                   autoComplete="lname"
                 />
               </Grid>
@@ -146,7 +147,7 @@ class SignUp extends React.Component {
               fullWidth
               variant="contained"
               color="primary"
-              href="http://localhost:3000/"
+              href=""
               onClick={this.onSubmitSignUp}
               className={classes.submit}
             >

@@ -15,9 +15,9 @@ class App extends React.Component {
       isSignedIn: false,
       user: {
         id: '',
-        email: '',
-        joined: '',
-        name: ''
+        nom: '',
+        prenom:'',
+        email: ''
       }
     }
   }
