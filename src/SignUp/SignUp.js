@@ -35,9 +35,11 @@ class SignUp extends React.Component {
     this.state = {
       signUpEmail: "",
       signUpPassword:""
-
     }
+    this.onEmailChange = this.onEmailChange.bind(this);
+    this.onPasswordChange = this.onPasswordChange.bind(this);
   }
+ 
   onEmailChange = (event) => {
     this.setState({signUpEmail: event.target.value})
   }
@@ -45,12 +47,20 @@ class SignUp extends React.Component {
     this.setState({signUpPassword: event.target.value})
   }
   onSubmitSignUp = () => {
+    fetch('http://localhost:3001/signup', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email: this.state.signUpEmail,
+        password: this.state.signUpPassword
+      })
+    })
     console.log(this.state);
   }
 
   
   render (){
-    
+
     return (
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -71,7 +81,7 @@ class SignUp extends React.Component {
                   required
                   fullWidth
                   id="firstName"
-                  label="Prénom"
+                  label={"Prénom"}
                   autoFocus
                 />
               </Grid>
@@ -92,7 +102,7 @@ class SignUp extends React.Component {
                   required
                   fullWidth
                   id="email"
-                  label="Adresse Email"
+                  label="Adresse email"
                   name="email"
                   autoComplete="email"
                   onChange={this.onEmailChange}
