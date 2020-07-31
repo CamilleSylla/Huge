@@ -11,7 +11,7 @@ import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import style from './style';
+import useStyle from './style';
 
 function Copyright() {
   return (
@@ -26,7 +26,7 @@ function Copyright() {
   );
 }
 
-const classes = style;
+const classes = useStyle;
 
 
 class SignUp extends React.Component {
@@ -67,7 +67,7 @@ class SignUp extends React.Component {
         nom: this.state.signUpNom,
         prenom: this.state.signUpPrenom
       })
-    }).then(alert('done'))
+    }).then(alert("Un email de confirmation vous a été envoyer"))
   }
 
   
@@ -147,7 +147,7 @@ class SignUp extends React.Component {
               fullWidth
               variant="contained"
               color="primary"
-              href=""
+              href="http://localhost:3000"
               onClick={this.onSubmitSignUp}
               className={classes.submit}
             >

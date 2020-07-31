@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 
-function style() {
+function useStyle() {
     
     makeStyles((theme) => ({
         
@@ -23,4 +23,4 @@ function style() {
       margin: theme.spacing(3, 0, 2),
     },
   }));}
-  export default style;
+  export default useStyle;
