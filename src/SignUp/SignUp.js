@@ -11,7 +11,7 @@ import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import useStyle from './style';
+import { withStyles } from '@material-ui/core/styles';
 
 function Copyright() {
   return (
@@ -26,7 +26,28 @@ function Copyright() {
   );
 }
 
-const classes = useStyle;
+const useStyle = theme => ({
+        
+  avatar: {
+      margin: theme.spacing(1),
+      backgroundColor: theme.palette.success.main,
+    },
+  paper: {
+    marginTop: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(3),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+});
+
+
 
 
 class SignUp extends React.Component {
@@ -72,7 +93,7 @@ class SignUp extends React.Component {
 
   
   render (){
-
+    const {classes} = this.props;
     return (
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -172,4 +193,4 @@ class SignUp extends React.Component {
   
 }
 
-export default SignUp;
+export default withStyles(useStyle)(SignUp);
