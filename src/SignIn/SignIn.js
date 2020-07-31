@@ -58,7 +58,22 @@ const useStyle = theme => ({
 });
 
 class SignInSide extends React.Component {
-  
+  constructor(props) {
+    super(props);
+    this.state={
+      email:"",
+      password:""
+    }
+    this.onEmailChange = this.onEmailChange.bind(this);
+    this.onPasswordChange = this.onPasswordChange.bind(this);
+  }
+  onEmailChange = (event) => {
+    this.setState({email: event.target.value})
+  }
+  onPasswordChange = (event) => {
+    this.setState({signUpPassword: event.target.value})
+  }
+
 render () {
   const {classes} = this.props;
   return (
@@ -82,6 +97,7 @@ render () {
               id="email"
               label="Adresse Email"
               name="email"
+              onChange={this.onEmailChange}
               autoComplete="email"
               autoFocus
             />
@@ -94,6 +110,7 @@ render () {
               label="Mot de Passe"
               type="password"
               id="password"
+              onChange={this.onPasswordChange}
               autoComplete="current-password"
             />
             <FormControlLabel
@@ -105,7 +122,7 @@ render () {
               fullWidth
               variant="contained"
               color="primary"
-              href="http://localhost:3000/dashboard"
+              href=""
               className={classes.submit}
             >
               Sign In
