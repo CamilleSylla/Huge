@@ -71,7 +71,18 @@ class SignInSide extends React.Component {
     this.setState({email: event.target.value})
   }
   onPasswordChange = (event) => {
-    this.setState({signUpPassword: event.target.value})
+    this.setState({password: event.target.value})
+  }
+
+  onSubmitSignIn = () => {
+    fetch('http://localhost:3001', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password,
+      })
+    }).then(alert('Vous etes connecté'))
   }
 
 render () {
@@ -123,6 +134,7 @@ render () {
               variant="contained"
               color="primary"
               href=""
+              onClick={this.onSubmitSignIn}
               className={classes.submit}
             >
               Sign In
