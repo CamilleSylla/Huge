@@ -82,7 +82,14 @@ class SignInSide extends React.Component {
         email: this.state.email,
         password: this.state.password,
       })
-    }).then(alert('Vous etes connecté'))
+    })
+    .then(response => response.json())
+    .then(user => {
+      if (user.id) {
+        this.props.loadUser(user)
+        this.props.onRouteChange('dashboard')
+      }
+    })
   }
 
 render () {
@@ -133,8 +140,8 @@ render () {
               fullWidth
               variant="contained"
               color="primary"
-              href=""
-              onClick={this.onSubmitSignIn}
+              href="http://localhost:3000/dashboard"
+              onClick={this.onSubmitSignIn.bind(this)}
               className={classes.submit}
             >
               Sign In
