@@ -6,7 +6,7 @@ import initialState from './state'
 
 const SignIn = lazy(() => import('./SignIn/SignIn'));
 const SignUp = lazy (() => import('./SignUp/SignUp'));
-const Dashboard = lazy (() => import('./Dashboard/Dashboard'));
+const Home = lazy (() => import('./Home/home'));
 
 
 
@@ -31,9 +31,9 @@ class App extends React.Component {
     <Router>
     <Suspense fallback={<div>Chargement...</div>}>
       <Switch>
-        <Route exact path="/" component={SignIn}/>
+        <Route exact path="/" component={Home}/>
         <Route path="/signup" component={SignUp}/>
-        <Route nom={this.state.user.nom} prenom={this.state.user.prenom} path="/dashboard" component={Dashboard}/>
+        <Route path="/signin" component={SignIn}/>
       </Switch>
     </Suspense>
   </Router>
