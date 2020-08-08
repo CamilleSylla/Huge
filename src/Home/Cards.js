@@ -16,12 +16,11 @@ const useStyles = makeStyles({
     marginRight: 20,
     marginTop: -50,
     marginBottom: 100,
-    backgroundColor: '#D6F299',
+    backgroundColor: '#507C5C',
     color: '#3F3F40',
   },
   inlineElement: {
     display: 'inline-flex',
-    backgroundColor: '#E1E1E5',
     
   },
 

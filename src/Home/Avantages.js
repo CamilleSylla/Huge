@@ -4,7 +4,6 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import CardMedia from '@material-ui/core/CardMedia';
 
 
 
@@ -37,16 +36,24 @@ const useStyles = makeStyles({
 
   },
   Box2: {
-    background: '#004A27',
+    background: '#507C5C',
     width: '50%',
     color: 'white',
   },
   Typo: {
     float: 'right',
     marginRight: 75,
-    marginTop: 50,
+    marginTop: 25,
     marginLeft: 50,
     textAlign: 'justify'
+  },
+
+  Btn: {
+    color: 'white',
+    borderColor: 'white !important',
+    float: 'left',
+    marginLeft: 50,
+    marginTop: 10,
   },
   
 });
@@ -57,11 +64,7 @@ export default function Avantages() {
   return (
       <Grid className={classes.inlineElement} container justify="center">
           <Box className={classes.Box1}>
-          <CardMedia className={classes.imageBox}
-                    component="img"
-                    repeat="no-repeat"
-                    title="Contemplative Reptile"
-                    />
+          
           </Box>
           <Box className={classes.Box2}>
             <Typography className={classes.Typo} gutterBottom  variant="h3" component="h2">
@@ -75,6 +78,7 @@ export default function Avantages() {
                Duis lacinia felis at tellus aliquam convallis.
              Vestibulum viverra nibh et lectus iaculis varius.
             </Typography>
+            <Button variant="outlined" className={classes.Btn}>Default</Button>
           </Box>
       </Grid>
     );
