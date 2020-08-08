@@ -18,8 +18,11 @@ const useStyles = makeStyles((theme) => ({
     overflowX: 'auto',
   },
   toolbarLink: {
-    padding: theme.spacing(1),
+    marginRight: theme.spacing(10),
     flexShrink: 0,
+    "&:hover": {
+      backgroundColor: "blue !important",
+    }
   },
 }));
 

@@ -1,7 +1,10 @@
 import React from "react";
 import Header from './Header';
 import Banniere from './Banniere';
-import Cards from './Cards'
+import Cards from './Cards';
+import Avantages from './Avantages';
+import champs from '../assets/champs.jpg';
+
 
 const sections = [
     { title: 'Accueil', url: '#' },
@@ -15,7 +18,7 @@ const sections = [
     title: 'Bienvenue sur Huge',
     description:
       "Votre solution pour la gestion de culture !",
-    image: 'https://source.unsplash.com/random',
+    image: champs,
     imgText: 'main image description',
     linkText: 'Continue reading…',
   };
@@ -26,6 +29,7 @@ class Home extends React.Component{
             <Header title="Huge" sections={sections} />
             <Banniere post={bannierePost} />
             <Cards/>
+            <Avantages/>
         </div>
         )
         
