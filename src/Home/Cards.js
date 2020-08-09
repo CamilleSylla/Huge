@@ -31,6 +31,8 @@ export default function Cards() {
 
   return (
       <Grid className={classes.inlineElement} container justify="center">
+            
+            
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardMedia
@@ -50,15 +52,9 @@ export default function Cards() {
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
                 </Card>
+
+
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardMedia
@@ -78,15 +74,9 @@ export default function Cards() {
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
                 </Card>
+
+
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardMedia
@@ -106,15 +96,8 @@ export default function Cards() {
                     </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                    Share
-                    </Button>
-                    <Button size="small" color="primary">
-                    Learn More
-                    </Button>
-                </CardActions>
                 </Card>
+
           </Grid>           
   );
 }
