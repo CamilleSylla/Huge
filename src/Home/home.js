@@ -5,7 +5,7 @@ import Cards from './Cards';
 import Avantages from './Avantages';
 import Arguments from './Arguments';
 import Preview from './Preview';
-import Notice from './Notice';
+import Notice from './Carousel/Notice';
 
 
 import champs from '../assets/champs.jpg';
