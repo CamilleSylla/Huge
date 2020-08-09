@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     marginTop: -50,
     marginBottom: 100,
     backgroundColor: '#507C5C',
-    color: '#3F3F40',
+    color: 'white',
   },
   inlineElement: {
     display: 'inline-flex',

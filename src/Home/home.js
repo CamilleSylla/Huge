@@ -4,6 +4,7 @@ import Banniere from './Banniere';
 import Cards from './Cards';
 import Avantages from './Avantages';
 import Arguments from './Arguments';
+import Preview from './Preview';
 import champs from '../assets/champs.jpg';
 
 
@@ -32,6 +33,7 @@ class Home extends React.Component{
             <Cards/>
             <Arguments/>
             <Avantages/>
+            <Preview/>
         </div>
         )
         
