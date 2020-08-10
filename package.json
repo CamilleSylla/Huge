@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-github-contribution-calendar": "^2.0.0",
     "react-particles-js": "^3.3.0",
     "react-responsive-carousel": "^3.2.9",
     "react-reveal": "^1.2.2",
