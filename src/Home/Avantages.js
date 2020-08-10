@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -62,7 +63,10 @@ export default function Avantages() {
   const classes = useStyles();
 
   return (
-      <Grid className={classes.inlineElement} container justify="center">
+      
+
+        <Fade bottom>
+          <Grid className={classes.inlineElement} container justify="center">
           <Box className={classes.Box1}>
           
           </Box>
@@ -80,6 +84,9 @@ export default function Avantages() {
             </Typography>
             <Button variant="outlined" className={classes.Btn}>Default</Button>
           </Box>
-      </Grid>
+          </Grid>
+        </Fade>
+         
+      
     );
 }

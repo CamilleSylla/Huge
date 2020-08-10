@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import Fade from 'react-reveal/Fade';
 
 
 //Image import
@@ -56,71 +57,76 @@ export default function Arguments() {
 
   return (
       <Grid container justify="center">
-          <Typography className={classes.Title} variant="h4" component="h6" >
-                Pourquoi Huge ?
-          </Typography>
-          <Typography className={classes.TitleP} variant="subtitle1" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-            </Typography>
+
+          
+            <Typography className={classes.Title} variant="h4" component="h6" >
+                    Pourquoi Huge ?
+              </Typography>
+              
+            <Typography className={classes.TitleP} variant="subtitle1" component="p">
+              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                          across all continents except Antarctica
+              </Typography>
+         
+          <Fade>
+            <Grid  className={classes.root} container justify="center">
+            <Box className={classes.allBox} >
+              <Grid container justify="center">
+                <Box className={classes.imgBox} component="img"  src={contract} ></Box>
+              </Grid>
+              <Typography className={classes.typoTitleBox} variant="h4" component="h6">
+                Argument 1
+              </Typography>
+              <Typography className={classes.typoParBox} variant="subtitle1" component="p">
+              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                          across all continents except Antarctica
+              </Typography>
+            </Box>
 
 
-          <Grid  className={classes.root} container justify="center">
-          <Box className={classes.allBox} >
-            <Grid container justify="center">
-              <Box className={classes.imgBox} component="img"  src={contract} ></Box>
+            <Box className={classes.allBox} >
+              <Grid container justify="center">
+                <Box className={classes.imgBox} component="img"  src={target} ></Box>
+              </Grid>
+              <Typography className={classes.typoTitleBox} variant="h4" component="h6">
+                Argument 2
+              </Typography>
+              <Typography className={classes.typoParBox} variant="subtitle1" component="p">
+              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                          across all continents except Antarctica
+              </Typography>
+            </Box>
+
+            <Box className={classes.allBox} >
+              <Grid container justify="center">
+                <Box className={classes.imgBox} component="img"  src={sitemap} ></Box>
+              </Grid>
+              <Typography className={classes.typoTitleBox} variant="h4" component="h6">
+                Argument 3
+              </Typography>
+              <Typography className={classes.typoParBox} variant="subtitle1" component="p">
+              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                          across all continents except Antarctica
+              </Typography>
+            </Box>
+
+            <Box className={classes.allBox} >
+              <Grid container justify="center">
+                <Box className={classes.imgBox} component="img"  src={growth} ></Box>
+              </Grid>
+              <Typography className={classes.typoTitleBox} variant="h4" component="h6">
+                Argument 4
+              </Typography>
+              <Typography className={classes.typoParBox} variant="subtitle1" component="p">
+              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                          across all continents except Antarctica
+              </Typography>
+            </Box>
+
+              
             </Grid>
-            <Typography className={classes.typoTitleBox} variant="h4" component="h6">
-              Argument 1
-            </Typography>
-            <Typography className={classes.typoParBox} variant="subtitle1" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-            </Typography>
-          </Box>
-
-
-          <Box className={classes.allBox} >
-            <Grid container justify="center">
-              <Box className={classes.imgBox} component="img"  src={target} ></Box>
-            </Grid>
-            <Typography className={classes.typoTitleBox} variant="h4" component="h6">
-              Argument 2
-            </Typography>
-            <Typography className={classes.typoParBox} variant="subtitle1" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-            </Typography>
-          </Box>
-
-          <Box className={classes.allBox} >
-            <Grid container justify="center">
-              <Box className={classes.imgBox} component="img"  src={sitemap} ></Box>
-            </Grid>
-            <Typography className={classes.typoTitleBox} variant="h4" component="h6">
-              Argument 3
-            </Typography>
-            <Typography className={classes.typoParBox} variant="subtitle1" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-            </Typography>
-          </Box>
-
-          <Box className={classes.allBox} >
-            <Grid container justify="center">
-              <Box className={classes.imgBox} component="img"  src={growth} ></Box>
-            </Grid>
-            <Typography className={classes.typoTitleBox} variant="h4" component="h6">
-              Argument 4
-            </Typography>
-            <Typography className={classes.typoParBox} variant="subtitle1" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                        across all continents except Antarctica
-            </Typography>
-          </Box>
-
-            
-          </Grid>
+          </Fade>
+          
           
       </Grid>
       

@@ -6,9 +6,12 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Avatar from '@material-ui/core/Avatar';
+import Fade from 'react-reveal/Fade';
+
+import profile from '../../assets/profile.jpg'
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
         width: 600,
         height: 300,
@@ -18,26 +21,39 @@ const useStyles = makeStyles({
         backgroundColor: 'white'
     },
     Box: {
-        width: '100%', 
+        width: '100%',
+        
     },
     Typo: {
         width: 'auto',
         backgroundColor: 'white',
         height: 250,
         textAlign: 'center',
+        color: '#507C5C',
+        paddingTop: 30,
     },
     Typo2: {
         width: 'auto',
         backgroundColor: 'white',
-        marginTop: -120,
+        marginTop: -100,
+        color: '#507C5C',
     },
     Typo3: {
         width: 'auto',
         backgroundColor: 'white',
-       marginBottom: 50,
+       marginBottom: 30,
+       color: '#507C5C',
     },
-  
-  });
+    imgGrid: {
+        width: '100%',
+        height: 50,
+        backgroundColor: 'white',
+    }, 
+    avaXL: {
+        width: theme.spacing(7),
+        height: theme.spacing(7),
+    },
+  }));
  
 export default function Notice () {
     const classes = useStyles();
@@ -45,59 +61,78 @@ export default function Notice () {
             <Grid container justify="center">
                 
                     <div className={classes.root}>
-                        <Carousel className={classes.carousel}>
 
-                        <div>
-                            <Box>
-                                <Typography className={classes.Typo} variant="h5" component="p">
-                                '' Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                            across all continents except Antarctica ''
-                                </Typography>
-                                <Typography className={classes.Typo2} variant="h6" component="p">
-                                Nom Prénom
-                                </Typography>
-                                <Typography className={classes.Typo3} variant="h6" component="p">
-                                Société
-                                </Typography>
-                            </Box>
-                            
-                        </div>
+                        <Fade>
+                            <Carousel   className={classes.carousel} 
+                                        autoPlay 
+                                        infiniteLoop
+                                        showArrows={false}
+                                        showStatus={false}
+                            >
 
-
-                        <div>
-                            <Box>
-                                <Typography className={classes.Typo} variant="h5" component="p">
-                                '' Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                            across all continents except Antarctica ''
-                                </Typography>
-                                <Typography className={classes.Typo2} variant="h6" component="p">
-                                Nom Prénom
-                                </Typography>
-                                <Typography className={classes.Typo3} variant="h6" component="p">
-                                Société
-                                </Typography>
-                            </Box>
-                            
-                        </div>
+                            <div>
+                                <Box>
+                                    <Grid className={classes.imgGrid} container justify="center">
+                                        <Avatar alt="Remy Sharp" src={profile} className={classes.avaXL}  />
+                                    </Grid>
+                                    <Typography className={classes.Typo} variant="h5" component="p">
+                                    '' Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                                across all continents except Antarctica ''
+                                    </Typography>
+                                    <Typography className={classes.Typo2} variant="h6" component="p">
+                                    Nom Prénom
+                                    </Typography>
+                                    <Typography className={classes.Typo3} variant="h6" component="p">
+                                    Société
+                                    </Typography>
+                                </Box>
+                                
+                            </div>
 
 
-                        <div>
-                            <Box>
-                                <Typography className={classes.Typo} variant="h5" component="p">
-                                '' Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                            across all continents except Antarctica ''
-                                </Typography>
-                                <Typography className={classes.Typo2} variant="h6" component="p">
-                                Nom Prénom
-                                </Typography>
-                                <Typography className={classes.Typo3} variant="h6" component="p">
-                                Société
-                                </Typography>
-                            </Box>
-                            
-                        </div>
+                            <div>
+                                <Box>
+                                    <Grid className={classes.imgGrid} container justify="center">
+                                        <Avatar alt="Remy Sharp" src={profile} className={classes.avaXL}  />
+                                    </Grid>
+                                    <Typography className={classes.Typo} variant="h5" component="p">
+                                    '' Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                                across all continents except Antarctica ''
+                                    </Typography>
+                                    <Typography className={classes.Typo2} variant="h6" component="p">
+                                    Nom Prénom
+                                    </Typography>
+                                    <Typography className={classes.Typo3} variant="h6" component="p">
+                                    Société
+                                    </Typography>
+                                </Box>
+                                
+                            </div>
 
-                        </Carousel>
+
+                            <div>
+                                <Box>
+                                    <Grid className={classes.imgGrid} container justify="center">
+                                        <Avatar alt="Remy Sharp" src={profile} className={classes.avaXL}  />
+                                    </Grid>
+                                    <Typography className={classes.Typo} variant="h5" component="p">
+                                    '' Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                                across all continents except Antarctica ''
+                                    </Typography>
+                                    <Typography className={classes.Typo2} variant="h6" component="p">
+                                    Nom Prénom
+                                    </Typography>
+                                    <Typography className={classes.Typo3} variant="h6" component="p">
+                                    Société
+                                    </Typography>
+                                </Box>
+                                
+                            </div>
+
+                            </Carousel>
+                        </Fade>
+                        
+
                     </div>
 
             </Grid>
