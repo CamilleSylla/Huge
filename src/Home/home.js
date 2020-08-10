@@ -6,6 +6,7 @@ import Avantages from './Avantages';
 import Arguments from './Arguments';
 import Preview from './Preview';
 import Notice from './Carousel/Notice';
+import Footer from '../Footer'
 
 
 import champs from '../assets/champs.jpg';
@@ -38,6 +39,7 @@ class Home extends React.Component{
             <Avantages/>
             <Preview/>
             <Notice/>
+            <Footer title="Footer" description="Something here to give the footer a purpose!" />
         </div>
         )
         
