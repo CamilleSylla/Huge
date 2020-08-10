@@ -10,6 +10,8 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import Contribution from './Contribution';
+import Grid from '@material-ui/core/Grid';
 
 //side bar list icone
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
@@ -39,6 +41,10 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     backgroundColor: '#15bd70',
   },
+  contriGrid: {
+    marginTop: 100,
+  },
+
 }));
 
 export default function Dashboard() {
@@ -89,6 +95,9 @@ export default function Dashboard() {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
+            <Grid className={classes.contriGrid}>
+              <Contribution/>
+            </Grid>
         
       </main>
     </div>
