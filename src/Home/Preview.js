@@ -39,7 +39,7 @@ const useStyles = makeStyles({
   Box1: {
     background: 'white',
     width: '50%',
-    color: '#507C5C',
+    color: '#15bd70',
   },
   Typo: {
     float: 'left',
@@ -49,8 +49,8 @@ const useStyles = makeStyles({
     textAlign: 'justify'
   },
   Btn: {
-    color: '#507C5C',
-    borderColor: '#507C5C !important',
+    color: '#15bd70',
+    borderColor: '#15bd70 !important',
     float: 'right',
     marginRight: 75,
     marginTop: 10,

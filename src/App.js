@@ -7,6 +7,7 @@ import initialState from './state'
 const SignIn = lazy(() => import('./SignIn/SignIn'));
 const SignUp = lazy (() => import('./SignUp/SignUp'));
 const Home = lazy (() => import('./Home/home'));
+const Dashboard = lazy (() => import('./Dashboard/Dashboard'));
 
 
 
@@ -34,6 +35,7 @@ class App extends React.Component {
         <Route exact path="/" component={Home}/>
         <Route path="/signup" component={SignUp}/>
         <Route path="/signin" component={SignIn}/>
+        <Route path="/dashboard" component={Dashboard}/>
       </Switch>
     </Suspense>
   </Router>

@@ -37,7 +37,7 @@ const useStyles = makeStyles({
 
   },
   Box2: {
-    background: '#507C5C',
+    background: '#15bd70',
     width: '50%',
     color: 'white',
   },

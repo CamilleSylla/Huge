@@ -29,20 +29,20 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'white',
         height: 250,
         textAlign: 'center',
-        color: '#507C5C',
+        color: '#15bd70',
         paddingTop: 30,
     },
     Typo2: {
         width: 'auto',
         backgroundColor: 'white',
         marginTop: -100,
-        color: '#507C5C',
+        color: '#15bd70',
     },
     Typo3: {
         width: 'auto',
         backgroundColor: 'white',
        marginBottom: 30,
-       color: '#507C5C',
+       color: '#15bd70',
     },
     imgGrid: {
         width: '100%',

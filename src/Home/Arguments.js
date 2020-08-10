@@ -22,12 +22,12 @@ const useStyles = makeStyles({
       marginBottom: 20,
       width: '100%',
       textAlign: 'center',
-      color: '#507C5C',
+      color: '#15bd70',
   },
   TitleP: {
     marginBottom: 50,
     width: '50%',
-    color: '#507C5C',
+    color: '#15bd70',
     textAlign: 'center'
 },
   allBox: {
@@ -42,12 +42,12 @@ const useStyles = makeStyles({
   typoTitleBox: {
     marginTop: '5%',
     textAlign: 'center',
-    color: '#507C5C'
+    color: '#15bd70'
   },
   typoParBox: {
     margin: '5%',
     textAlign: 'justify',
-    color: '#507C5C'
+    color: '#15bd70'
   },
 
 });

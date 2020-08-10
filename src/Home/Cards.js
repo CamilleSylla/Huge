@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     marginRight: 20,
     marginTop: -50,
     marginBottom: 100,
-    backgroundColor: '#507C5C',
+    backgroundColor: '#15bd70',
     color: 'white',
   },
   inlineElement: {
