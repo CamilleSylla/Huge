@@ -12,6 +12,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Contribution from './Contribution';
 import Grid from '@material-ui/core/Grid';
+import ProgressBar from './PrgressBar';
 
 //side bar list icone
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
@@ -46,10 +47,24 @@ const useStyles = makeStyles((theme) => ({
   },
 
 }));
+const testData = [
+  { bgcolor: "#6a1b9a", completed: 60 },
+  { bgcolor: "#00695c", completed: 30 },
+  { bgcolor: "#ef6c00", completed: 53 },
+];
+
+function App() {
+  return (
+    <div className="App">
+      {testData.map((item, idx) => (
+        <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+      ))}
+    </div>
+  );
+}
 
 export default function Dashboard() {
   const classes = useStyles();
-
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -97,6 +112,11 @@ export default function Dashboard() {
         <div className={classes.toolbar} />
             <Grid className={classes.contriGrid}>
               <Contribution/>
+              <div className="App">
+                {testData.map((item, idx) => (
+                  <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+                ))}
+              </div>
             </Grid>
         
       </main>
