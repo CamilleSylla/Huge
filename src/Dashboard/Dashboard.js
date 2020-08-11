@@ -10,9 +10,10 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import Contribution from './Contribution';
+import Timeline from './Contribution';
+import Lines from './Lines';
+import Product from './Product';
 import Grid from '@material-ui/core/Grid';
-import ProgressBar from './PrgressBar';
 
 //side bar list icone
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
@@ -43,25 +44,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#15bd70',
   },
   contriGrid: {
+    width: 600,
+    marginLeft: 20,
     marginTop: 100,
   },
 
 }));
-const testData = [
-  { bgcolor: "#6a1b9a", completed: 60 },
-  { bgcolor: "#00695c", completed: 30 },
-  { bgcolor: "#ef6c00", completed: 53 },
-];
 
-function App() {
-  return (
-    <div className="App">
-      {testData.map((item, idx) => (
-        <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
-      ))}
-    </div>
-  );
-}
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -111,12 +100,9 @@ export default function Dashboard() {
       <main className={classes.content}>
         <div className={classes.toolbar} />
             <Grid className={classes.contriGrid}>
-              <Contribution/>
-              <div className="App">
-                {testData.map((item, idx) => (
-                  <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
-                ))}
-              </div>
+              <Timeline/>
+              <Lines/>
+              <Product/>
             </Grid>
         
       </main>
