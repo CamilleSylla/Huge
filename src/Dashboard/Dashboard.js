@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
   },
+  content: {
+    width: '100%'
+  },
   drawer: {
     width: drawerWidth,
     maxWidth: drawerWidth,
@@ -43,8 +46,12 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     backgroundColor: '#15bd70',
   },
+
+  contentGrid: {
+    width: '100%'
+  },
   componentGrid: {
-    width: 1080,
+    width: 1000,
     marginTop: 100,
   },
   proLineGrid: {
@@ -106,21 +113,23 @@ export default function Dashboard() {
           ))}
         </List>
       </Drawer>
-      <main className={classes.content}>
+      <main className={classes.content} style={{justify: "center"}}>
         <div className={classes.toolbar} />
-        <Grid className={classes.componentGrid}>
-        <Timeline/>
-          <Grid Grid className={classes.proLineGrid}>
-            <Grid className={classes.LinesGrid}>
-              <Lines/>
-            </Grid>
-            <Grid className={classes.productGrid}>
-              <Product/>
-            </Grid>
-                
+
+        <Grid className={classes.contentGrid} container justify="center">
+          <Grid className={classes.componentGrid}>
+          <Timeline/>
+            <Grid Grid className={classes.proLineGrid}>
+              <Grid className={classes.LinesGrid}>
+                <Lines/>
+              </Grid>
+              <Grid className={classes.productGrid}>
                 <Product/>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
+        
             
         
       </main>
