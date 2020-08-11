@@ -43,10 +43,19 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     backgroundColor: '#15bd70',
   },
-  contriGrid: {
-    width: 600,
-    marginLeft: 20,
+  componentGrid: {
+    width: 1080,
     marginTop: 100,
+  },
+  proLineGrid: {
+    width: '100%',
+    display: 'inline-flex'
+  },
+  LinesGrid: {
+    width: '50%',
+  },
+  productGrid: {
+    width: '50%',
   },
 
 }));
@@ -99,11 +108,20 @@ export default function Dashboard() {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-            <Grid className={classes.contriGrid}>
-              <Timeline/>
+        <Grid className={classes.componentGrid}>
+        <Timeline/>
+          <Grid Grid className={classes.proLineGrid}>
+            <Grid className={classes.LinesGrid}>
               <Lines/>
+            </Grid>
+            <Grid className={classes.productGrid}>
               <Product/>
             </Grid>
+                
+                <Product/>
+          </Grid>
+        </Grid>
+            
         
       </main>
     </div>
