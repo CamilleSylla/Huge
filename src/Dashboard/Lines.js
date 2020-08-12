@@ -2,10 +2,49 @@ import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 
 export default function Lines() {
-    const series = [{
-        name: "Desktops",
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-    }];
+    const series = [
+      {
+        name: "patates",
+        data: [
+        {
+          y: '5000',
+          x:new Date('2019-06-15').getTime()
+        },
+        {
+          y: '3000',
+          x: new Date('2019-08-01').getTime(), 
+        },
+        {
+          y: '50',
+          x: new Date('2019-10-01').getTime(), 
+        },
+        {
+          y: '2000',
+          x: new Date('2019-12-01').getTime(), 
+        }
+      ]
+    },{
+      name: "choux",
+      data: [
+      {
+        y: '2500',
+        x:new Date('2019-04-15').getTime()
+      },
+      {
+        y: '1250',
+        x: new Date('2019-05-01').getTime(), 
+      },
+      {
+        y: '4236',
+        x: new Date('2019-10-01').getTime(), 
+      },
+      {
+        y: '935',
+        x: new Date('2019-11-01').getTime(), 
+      }
+    ]
+  },
+  ];
     const options = {
       chart: {
         height: 350,
@@ -21,7 +60,7 @@ export default function Lines() {
         curve: 'straight'
       },
       title: {
-        text: 'Product Trends by Month',
+        text: 'Courbes des produits utilisées',
         align: 'left'
       },
       grid: {
@@ -31,7 +70,7 @@ export default function Lines() {
         },
       },
       xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+        type: 'datetime'
       }
     };
   
