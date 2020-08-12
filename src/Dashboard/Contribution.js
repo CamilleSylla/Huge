@@ -9,58 +9,61 @@
 
     const series = [
       {
-        name: 'Bob',
+        name: 'Patates',
         data: [
           {
-            x: 'Design',
+            x: 'Parcelle 1',
             y: [
-              new Date('2019-03-05').getTime(),
-              new Date('2019-03-08').getTime()
+              new Date('2019-01-01').getTime(),
+              new Date('2019-06-15').getTime()
             ]
           },
           {
-            x: 'Code',
+            x: 'Parcelle 2',
             y: [
-              new Date('2019-03-08').getTime(),
+              new Date('2019-02-08').getTime(),
               new Date('2019-03-11').getTime()
             ]
           },
           {
-            x: 'Test',
+            x: 'Parcelle 3',
             y: [
-              new Date('2019-03-11').getTime(),
-              new Date('2019-03-16').getTime()
+              new Date('2019-06-11').getTime(),
+              new Date('2019-08-16').getTime()
             ]
           }
         ]
       },
+
       {
-        name: 'Joe',
+        name: 'Laitue',
         data: [
           {
-            x: 'Design',
+            x: 'Parcelle 1',
             y: [
-              new Date('2019-03-02').getTime(),
-              new Date('2019-03-05').getTime()
+              new Date('2019-05-05').getTime(),
+              new Date('2019-11-08').getTime()
             ]
           },
           {
-            x: 'Code',
+            x: 'Parcelle 2',
             y: [
-              new Date('2019-03-06').getTime(),
-              new Date('2019-03-09').getTime()
+              new Date('2019-07-08').getTime(),
+              new Date('2019-09-11').getTime()
             ]
           },
           {
-            x: 'Test',
+            x: 'Parcelle 3',
             y: [
-              new Date('2019-03-10').getTime(),
-              new Date('2019-03-19').getTime()
+              new Date('2019-08-11').getTime(),
+              new Date('2019-09-16').getTime()
             ]
           }
         ]
-      }
+      },
     ];
+
+
     const options = {
       chart: {
         height: 350,
@@ -76,8 +79,8 @@
         formatter: function(val) {
           var a = moment(val[0])
           var b = moment(val[1])
-          var diff = b.diff(a, 'days')
-          return diff + (diff > 1 ? ' days' : ' day')
+          var diff = b.diff(a, 'weeks')
+          return diff + (diff > 1 ? ' semaines' : ' weeks')
         }
       },
       fill: {
@@ -94,10 +97,13 @@
         }
       },
       xaxis: {
-        type: 'datetime'
-      },
+        type: 'datetime',
+        labels: {
+          format: 'MM/yy'
+        }
+    },
       legend: {
-        position: 'top'
+        position: 'bottom'
       }
     };
 
