@@ -26,58 +26,61 @@ import HelpOutlineRoundedIcon from '@material-ui/icons/HelpOutlineRounded';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-  },
-  appBar: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-  },
-  content: {
-    width: '100%'
-  },
-  drawer: {
-    width: drawerWidth,
-    maxWidth: drawerWidth,
-    flexShrink: 0,
-  },
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  // necessary for content to be below app bar
-  toolbar: {
-    backgroundColor: '#15bd70',
-  },
+      root: {
+        display: 'flex',
+      },
+      appBar: {
+        width: `calc(100% - ${drawerWidth}px)`,
+        marginLeft: drawerWidth,
+      },
+      content: {
+        width: '100%'
+      },
+      drawer: {
+        width: drawerWidth,
+        maxWidth: drawerWidth,
+        flexShrink: 0,
+      },
+      drawerPaper: {
+        width: drawerWidth,
+      },
+      // necessary for content to be below app bar
+      toolbar: {
+        backgroundColor: '#15bd70',
+      },
 
-  contentGrid: {
-    width: '100%'
-  },
-  componentGrid: {
-    width: 1000,
-    marginTop: 100,
-  },
-  progressGrid:{
-    display: 'inline-flex',
-    width: '100%',
-  },
-  progress: {
-    width: '20%',
-  },
-  itemList: {
-    width: '80%',
-  },
-  proLineGrid: {
-    width: '100%',
-    display: 'inline-flex'
-  },
-  LinesGrid: {
-    width: '50%',
-  },
-  productGrid: {
-    width: '50%',
-  },
+      contentGrid: {
+        width: '100%'
+      },
+      componentGrid: {
+        width: 1000,
+        marginTop: 100,
+      },
+      progressGrid:{
+        display: 'inline-flex',
+        width: '100%',
+      },
+      progress: {
+        width: '20%',
+      },
+      itemList: {
+        width: '80%',
+      },
+      proLineGrid: {
+        width: '100%',
+        display: 'inline-flex'
+      },
+      LinesGrid: {
+        width: '50%',
+      },
+      productGrid: {
+        width: '50%',
+      },
 
-}));
+    }
+  )
+);
+
 
 
 export default function Dashboard() {
