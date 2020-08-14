@@ -3,11 +3,39 @@
   import ReactApexChart from 'react-apexcharts';
   import moment from 'moment';
 
+  //dataimport 
+
+import item from './GlobalData'
+
+function renderData() {
+  return item.production.map((production, i) => {
+      const {parcelle, produit, total, utilise, semi, recolte } = production
+    
+      return (
+        {
+          name: produit,
+          data: [
+            {
+              x: parcelle,
+              y: [
+                new Date(semi).getTime(),
+                new Date(recolte).getTime()
+              ]
+            },
+          ]
+        }
+      )
+          
+      }
+  ); 
+};
 
   export default function Timeline() {
     window.moment = moment
-
-    const series = [
+    
+    const series = renderData();
+    console.log(series);
+    /*[
       {
         name: 'Patates',
         data: [
@@ -33,36 +61,112 @@
             ]
           }
         ]
-      },
-
-      {
-        name: 'Laitue',
+      },{
+        name: 'Patates',
         data: [
           {
             x: 'Parcelle 1',
             y: [
-              new Date('2019-05-05').getTime(),
-              new Date('2019-11-08').getTime()
+              new Date('2019-01-01').getTime(),
+              new Date('2019-06-15').getTime()
             ]
           },
           {
             x: 'Parcelle 2',
             y: [
-              new Date('2019-07-08').getTime(),
-              new Date('2019-09-11').getTime()
+              new Date('2019-02-08').getTime(),
+              new Date('2019-03-11').getTime()
             ]
           },
           {
             x: 'Parcelle 3',
             y: [
-              new Date('2019-08-11').getTime(),
-              new Date('2019-09-16').getTime()
+              new Date('2019-06-11').getTime(),
+              new Date('2019-08-16').getTime()
             ]
           }
         ]
       },
-    ];
+      {
+        name: 'Patates',
+        data: [
+          {
+            x: 'Parcelle 1',
+            y: [
+              new Date('2019-01-01').getTime(),
+              new Date('2019-06-15').getTime()
+            ]
+          },
+          {
+            x: 'Parcelle 2',
+            y: [
+              new Date('2019-02-08').getTime(),
+              new Date('2019-03-11').getTime()
+            ]
+          },
+          {
+            x: 'Parcelle 3',
+            y: [
+              new Date('2019-06-11').getTime(),
+              new Date('2019-08-16').getTime()
+            ]
+          }
+        ]
+      },{
+        name: 'Patates',
+        data: [
+          {
+            x: 'Parcelle 1',
+            y: [
+              new Date('2019-01-01').getTime(),
+              new Date('2019-06-15').getTime()
+            ]
+          },
+          {
+            x: 'Parcelle 2',
+            y: [
+              new Date('2019-02-08').getTime(),
+              new Date('2019-03-11').getTime()
+            ]
+          },
+          {
+            x: 'Parcelle 3',
+            y: [
+              new Date('2019-06-11').getTime(),
+              new Date('2019-08-16').getTime()
+            ]
+          }
+        ]
+      },{
+        name: 'Patates',
+        data: [
+          {
+            x: 'Parcelle 1',
+            y: [
+              new Date('2019-01-01').getTime(),
+              new Date('2019-06-15').getTime()
+            ]
+          },
+          {
+            x: 'Parcelle 2',
+            y: [
+              new Date('2019-02-08').getTime(),
+              new Date('2019-03-11').getTime()
+            ]
+          },
+          {
+            x: 'Parcelle 3',
+            y: [
+              new Date('2019-06-11').getTime(),
+              new Date('2019-08-16').getTime()
+            ]
+          }
+        ]
+      },
+    
+      
 
+    ];*/
 
     const options = {
       chart: {
@@ -71,7 +175,8 @@
       },
       plotOptions: {
         bar: {
-          horizontal: true
+          horizontal: true,
+        
         }
       },
       dataLabels: {
