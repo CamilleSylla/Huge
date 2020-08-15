@@ -41,8 +41,8 @@ const item = {
             parcelle: 'Parcelle 5', 
             total: '3500', 
             utilise: '1230', 
-            semi: '2020-08-30', 
-            recolte: '2020-02-10', 
+            semi: '2020-02-15', 
+            recolte: '2020-08-10', 
             produit: 'Patates', 
             id: 2
         },
@@ -55,6 +55,7 @@ const item = {
             produit: 'Choux', 
             id: 1
         },
+        
     ]
   }
 

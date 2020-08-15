@@ -1,8 +1,30 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
+import item from './GlobalData';
+
+function renderData() {
+  return item.production.map((production, i) => {
+      const {parcelle, produit, total, utilise, semi, recolte } = production
+    
+      return (
+        {
+          name: produit,
+          data: [
+          {
+            y: utilise,
+            x:new Date(semi).getTime()
+          },
+        ]
+      }
+      )
+          
+      }
+  ); 
+};
 
 export default function Lines() {
-    const series = [
+    const series = renderData();
+    /*[
       {
         name: "patates",
         data: [
@@ -44,7 +66,7 @@ export default function Lines() {
       }
     ]
   },
-  ];
+  ];*/
     const options = {
       chart: {
         height: 350,

@@ -35,138 +35,7 @@ function renderData() {
     
     const series = renderData();
     console.log(series);
-    /*[
-      {
-        name: 'Patates',
-        data: [
-          {
-            x: 'Parcelle 1',
-            y: [
-              new Date('2019-01-01').getTime(),
-              new Date('2019-06-15').getTime()
-            ]
-          },
-          {
-            x: 'Parcelle 2',
-            y: [
-              new Date('2019-02-08').getTime(),
-              new Date('2019-03-11').getTime()
-            ]
-          },
-          {
-            x: 'Parcelle 3',
-            y: [
-              new Date('2019-06-11').getTime(),
-              new Date('2019-08-16').getTime()
-            ]
-          }
-        ]
-      },{
-        name: 'Patates',
-        data: [
-          {
-            x: 'Parcelle 1',
-            y: [
-              new Date('2019-01-01').getTime(),
-              new Date('2019-06-15').getTime()
-            ]
-          },
-          {
-            x: 'Parcelle 2',
-            y: [
-              new Date('2019-02-08').getTime(),
-              new Date('2019-03-11').getTime()
-            ]
-          },
-          {
-            x: 'Parcelle 3',
-            y: [
-              new Date('2019-06-11').getTime(),
-              new Date('2019-08-16').getTime()
-            ]
-          }
-        ]
-      },
-      {
-        name: 'Patates',
-        data: [
-          {
-            x: 'Parcelle 1',
-            y: [
-              new Date('2019-01-01').getTime(),
-              new Date('2019-06-15').getTime()
-            ]
-          },
-          {
-            x: 'Parcelle 2',
-            y: [
-              new Date('2019-02-08').getTime(),
-              new Date('2019-03-11').getTime()
-            ]
-          },
-          {
-            x: 'Parcelle 3',
-            y: [
-              new Date('2019-06-11').getTime(),
-              new Date('2019-08-16').getTime()
-            ]
-          }
-        ]
-      },{
-        name: 'Patates',
-        data: [
-          {
-            x: 'Parcelle 1',
-            y: [
-              new Date('2019-01-01').getTime(),
-              new Date('2019-06-15').getTime()
-            ]
-          },
-          {
-            x: 'Parcelle 2',
-            y: [
-              new Date('2019-02-08').getTime(),
-              new Date('2019-03-11').getTime()
-            ]
-          },
-          {
-            x: 'Parcelle 3',
-            y: [
-              new Date('2019-06-11').getTime(),
-              new Date('2019-08-16').getTime()
-            ]
-          }
-        ]
-      },{
-        name: 'Patates',
-        data: [
-          {
-            x: 'Parcelle 1',
-            y: [
-              new Date('2019-01-01').getTime(),
-              new Date('2019-06-15').getTime()
-            ]
-          },
-          {
-            x: 'Parcelle 2',
-            y: [
-              new Date('2019-02-08').getTime(),
-              new Date('2019-03-11').getTime()
-            ]
-          },
-          {
-            x: 'Parcelle 3',
-            y: [
-              new Date('2019-06-11').getTime(),
-              new Date('2019-08-16').getTime()
-            ]
-          }
-        ]
-      },
     
-      
-
-    ];*/
 
     const options = {
       chart: {
@@ -176,6 +45,7 @@ function renderData() {
       plotOptions: {
         bar: {
           horizontal: true,
+          barHeight: '100%',
         
         }
       },
@@ -187,6 +57,9 @@ function renderData() {
           var diff = b.diff(a, 'weeks')
           return diff + (diff > 1 ? ' semaines' : ' weeks')
         }
+      },
+      stroke: {
+        width: 1
       },
       fill: {
         type: 'gradient',

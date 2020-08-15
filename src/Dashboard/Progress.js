@@ -1,7 +1,42 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
+import item  from  './GlobalData';
 import moment from 'moment';
 
+function renderPercentData() {
+  return item.production.map((production, i) => {
+      const {parcelle, produit, total, utilise, semi, recolte } = production
+      
+      let start = new Date(semi), end = new Date(recolte), today = new Date ();
+
+      let q = Math.abs(today-start);
+      let d = Math.abs(end-start);
+
+      let division = Math.round((q/d)*100); 
+
+      
+        return (
+          [division]
+        )
+      
+      
+          
+      }
+  ); 
+};
+function renderLabelData() {
+  return item.production.map((production, i) => {
+      const {parcelle, produit, total, utilise, semi, recolte } = production
+      
+        return (
+          [produit, parcelle]
+        )
+      
+      
+          
+      }
+  ); 
+};
 
 class Progress extends React.Component {
     constructor(props) {
@@ -9,7 +44,7 @@ class Progress extends React.Component {
 
       this.state = {
       
-        series: [44, 55, 67, 83],
+        series: renderPercentData(),
         options: {
             
           chart: {
@@ -37,7 +72,7 @@ class Progress extends React.Component {
               },
             }
           },
-          labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
+          labels: renderLabelData(),
         },
       
       
