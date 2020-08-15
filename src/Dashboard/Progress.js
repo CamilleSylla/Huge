@@ -7,17 +7,21 @@ function renderPercentData() {
   return item.production.map((production, i) => {
       const {parcelle, produit, total, utilise, semi, recolte } = production
       
-      let start = new Date(semi), end = new Date(recolte), today = new Date ();
+      let percent = []
 
-      let q = Math.abs(today-start);
-      let d = Math.abs(end-start);
+      let start = new Date(semi), end = new Date(recolte), today = new Date ();
+      let q = Math.round(today-start);
+      let d = Math.round(end-start);
 
       let division = Math.round((q/d)*100); 
 
-      
-        return (
-          [division]
-        )
+      if (division < 100 && division > 0) {
+        percent.push(division)
+      }
+      return (
+        percent
+      )
+        
       
       
           
