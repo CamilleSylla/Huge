@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 import item  from  './GlobalData';
-import moment from 'moment';
 
 function renderPercentData() {
   return item.production.map((production, i) => {
-      const {parcelle, produit, total, utilise, semi, recolte } = production
+      const {semi, recolte } = production
       
       let percent = []
 

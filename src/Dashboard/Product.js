@@ -1,9 +1,29 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
+import item from './GlobalData';
+
+function renderPercentData() {
+  return item.production.map((production, i) => { 
+    const {parcelle, produit, total, utilise, semi, recolte } = production
+
+    return (
+      {
+        name: produit,
+        data: [
+          {
+            x: new Date(semi).getTime(),
+            y: utilise,
+          },
+        ]
+      }
+    )
+   } 
+  ) 
+}
 
 export default function Product() {
 
-    const series = [{
+    const series = renderPercentData(); /*[{
         name: 'Net Profit',
         data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
       }, {
@@ -12,7 +32,7 @@ export default function Product() {
       }, {
         name: 'Free Cash Flow',
         data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
-      }];
+      }];*/
       const options = {
         chart: {
           type: 'bar',
@@ -34,7 +54,10 @@ export default function Product() {
           colors: ['transparent']
         },
         xaxis: {
-          categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+          type: 'datetime',
+        labels: {
+          format: 'MM/yy'
+        }
         },
         yaxis: {
           title: {
