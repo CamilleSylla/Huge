@@ -4,6 +4,8 @@ import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+import AccessibilityIcon from '@material-ui/icons/Accessibility';
 
 import item from './GlobalData'
 
@@ -57,12 +59,12 @@ const classes = useStyles();
             </Grid>
             <Grid className={classes.allCards}>
                 <Card>
-                    <AccessTimeIcon/>
+                    <AccountBalanceIcon/>
                 </Card>
             </Grid>
             <Grid className={classes.allCards}>
                 <Card>
-                    <AccessTimeIcon/>
+                    <AccessibilityIcon/>
                 </Card>
             </Grid>
         </Grid>
