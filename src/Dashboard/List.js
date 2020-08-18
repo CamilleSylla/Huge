@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import Fade from 'react-reveal/Fade';
 
 //dataimport 
 
@@ -20,13 +21,26 @@ function renderData() {
                 return (
                 
                     <tr>
-                        <td>{parcelle}</td>
-                        <td>{produit}</td>
-                        <td>{total}</td>
-                        <td>{utilise}</td>
-                        <td>{semi}</td>
-                        <td>{recolte}</td>
+                        <Fade left>
+                            <td>{parcelle}</td>
+                        </Fade>
+                        <Fade right>
+                            <td>{produit}</td>
+                        </Fade>
+                        <Fade left>
+                            <td>{total}</td>
+                        </Fade>
+                        <Fade right>
+                            <td>{utilise}</td>
+                        </Fade>
+                        <Fade left>
+                            <td>{semi}</td>
+                        </Fade>
+                        <Fade right>
+                            <td>{recolte}</td>
+                        </Fade>
                     </tr>
+                    
                 ) 
             }
         }); 

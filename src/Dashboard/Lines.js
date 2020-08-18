@@ -92,7 +92,10 @@ export default function Lines() {
         },
       },
       xaxis: {
-        type: 'datetime'
+        type: 'datetime',
+        labels: {
+          format: 'MM/yy'
+        }
       }
     };
   

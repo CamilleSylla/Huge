@@ -34,7 +34,6 @@ function renderData() {
     window.moment = moment
     
     const series = renderData();
-    console.log(series);
     
 
     const options = {

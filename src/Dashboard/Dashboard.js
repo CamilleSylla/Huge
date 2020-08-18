@@ -13,8 +13,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Timeline from './Contribution';
 import Lines from './Lines';
 import Product from './Product';
+import Cards from './Cards'
 import Grid from '@material-ui/core/Grid';
-import Progress from './Progress';
 import ItemList from './List';
 
 //side bar list icone
@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
       },
       progress: {
-        width: '20%',
+        width: '25%',
       },
       itemList: {
         width: '80%',
@@ -134,13 +134,11 @@ export default function Dashboard() {
         <Grid className={classes.contentGrid} container justify="center">
           <Grid className={classes.componentGrid}>
 
-            <Grid className={classes.progressGrid}>
+          <Cards/>
+            <Grid className={classes.progressGrid} container justify="center">
               
-              <Grid className={classes.itemList}>
+              <Grid className={classes.itemList} >
                 <ItemList/>
-              </Grid>
-              <Grid className={classes.progress}>
-                <Progress />
               </Grid>
             </Grid>
             
