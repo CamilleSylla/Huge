@@ -16,6 +16,8 @@ import Product from './Product';
 import Cards from './Cards'
 import Grid from '@material-ui/core/Grid';
 import ItemList from './List';
+import Home from './Home'
+import Parcelles from './components/parcelles'
 
 //side bar list icone
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
@@ -83,8 +85,23 @@ const useStyles = makeStyles((theme) => ({
 
 
 
+
+
+
 export default function Dashboard() {
   const classes = useStyles();
+  const state = {route: 'parcelles'};
+
+  const manager = state.route;
+  let home;
+  if (manager=== 'accueil'){
+    home = <Home/>
+  }else {
+    if (manager==='parcelles') {
+      home = <Parcelles/>
+    }
+  }
+  
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -106,14 +123,14 @@ export default function Dashboard() {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          {['Accueil', 'Mes Parcelles', 'Ajouté', 'Aide'].map((text, index) => (
+          {['Accueil', 'Mes Parcelles', 'Ajouté', 'Aide'].map((text, nombre) => (
             <ListItem button key={text}>
               <ListItemIcon>
-                  {index === 0 && <HomeRoundedIcon /> }
-                  {index === 1 && <ListAltRoundedIcon /> }
-                  {index === 2 && <PostAddRoundedIcon /> }
-                  {index === 3 && <HelpOutlineRoundedIcon /> }
-              </ListItemIcon>
+                  {nombre === 0 && <HomeRoundedIcon /> }
+                  {nombre === 1 && <ListAltRoundedIcon /> }
+                  {nombre === 2 && <PostAddRoundedIcon /> }
+                  {nombre === 3 && <HelpOutlineRoundedIcon /> }
+                </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
@@ -130,29 +147,16 @@ export default function Dashboard() {
       </Drawer>
       <main className={classes.content} style={{justify: "center"}}>
         <div className={classes.toolbar} />
+        
+        
+          <div manager={manager}>
+            {home}
+            </div>
+        
 
-        <Grid className={classes.contentGrid} container justify="center">
-          <Grid className={classes.componentGrid}>
+        
 
-          <Cards/>
-            <Grid className={classes.progressGrid} container justify="center">
-              
-              <Grid className={classes.itemList} >
-                <ItemList/>
-              </Grid>
-            </Grid>
-            
-          <Timeline/>
-            <Grid Grid className={classes.proLineGrid}>
-              <Grid className={classes.LinesGrid}>
-                <Lines/>
-              </Grid>
-              <Grid className={classes.productGrid}>
-                <Product/>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
+       
         
             
         
