@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -10,6 +10,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import Button from '@material-ui/core/Button';
 import Timeline from './Contribution';
 import Lines from './Lines';
 import Product from './Product';
@@ -27,7 +28,7 @@ import HelpOutlineRoundedIcon from '@material-ui/icons/HelpOutlineRounded';
 
 const drawerWidth = 240;
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = theme => ({
       root: {
         display: 'flex',
       },
@@ -81,27 +82,22 @@ const useStyles = makeStyles((theme) => ({
 
     }
   )
-);
+;
 
 
 
+class Dashboard extends React.Component{
 
-
-
-export default function Dashboard() {
-  const classes = useStyles();
-  const state = {route: 'parcelles'};
-
-  const manager = state.route;
-  let home;
-  if (manager=== 'accueil'){
-    home = <Home/>
-  }else {
-    if (manager==='parcelles') {
-      home = <Parcelles/>
-    }
+  state ={
+    whichComponentToShow : "Home"
   }
   
+
+render(){
+
+
+const {classes} = this.props;
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -123,17 +119,10 @@ export default function Dashboard() {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          {['Accueil', 'Mes Parcelles', 'Ajouté', 'Aide'].map((text, nombre) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                  {nombre === 0 && <HomeRoundedIcon /> }
-                  {nombre === 1 && <ListAltRoundedIcon /> }
-                  {nombre === 2 && <PostAddRoundedIcon /> }
-                  {nombre === 3 && <HelpOutlineRoundedIcon /> }
-                </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <Button onClick={() => {
+this.setState({whichComponentToShow: "Parcelles"}); console.log(this.state)
+          }}>
+            <HomeRoundedIcon/> Accueil</Button>
         </List>
         <Divider />
         <List>
@@ -149,18 +138,15 @@ export default function Dashboard() {
         <div className={classes.toolbar} />
         
         
-          <div manager={manager}>
-            {home}
+          <div>
+            {this.state.whichComponentToShow === "Home" ? <Home/> : null}
+            {this.state.whichComponentToShow === "Parcelles" ? <Product/> : null}
             </div>
-        
-
-        
-
-       
-        
-            
         
       </main>
     </div>
   );
 }
+}
+ export default withStyles(useStyles)(Dashboard);
+  
