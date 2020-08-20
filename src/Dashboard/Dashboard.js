@@ -18,13 +18,18 @@ import Cards from './Cards'
 import Grid from '@material-ui/core/Grid';
 import ItemList from './List';
 import Home from './Home'
-import Parcelles from './components/parcelles'
+import ParcellesList from './components/parcelles'
 
 //side bar list icone
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import ListAltRoundedIcon from '@material-ui/icons/ListAltRounded';
 import PostAddRoundedIcon from '@material-ui/icons/PostAddRounded';
 import HelpOutlineRoundedIcon from '@material-ui/icons/HelpOutlineRounded';
+
+// animation
+
+import Fade from 'react-reveal/Fade';
+
 
 const drawerWidth = 240;
 
@@ -96,6 +101,13 @@ class Dashboard extends React.Component{
 render(){
 
 
+let manage;
+if (this.state.whichComponentToShow === "Home") {
+  manage = <Fade left><Home/></Fade>
+} else if (this.state.whichComponentToShow === "Parcelles") {
+  manage = <ParcellesList/>
+}
+
 const {classes} = this.props;
 
   return (
@@ -120,9 +132,17 @@ const {classes} = this.props;
         <Divider />
         <List>
           <Button onClick={() => {
-this.setState({whichComponentToShow: "Parcelles"}); console.log(this.state)
-          }}>
-            <HomeRoundedIcon/> Accueil</Button>
+                  this.setState({whichComponentToShow: "Home"}); console.log(this.state)
+                  }}>
+            <HomeRoundedIcon/>
+             Accueil
+             </Button>
+             <Button onClick={() => {
+                  this.setState({whichComponentToShow: "Parcelles"}); console.log(this.state)
+                  }}>
+            <ListAltRoundedIcon/>
+             Mes Parcelles
+             </Button>
         </List>
         <Divider />
         <List>
@@ -139,8 +159,7 @@ this.setState({whichComponentToShow: "Parcelles"}); console.log(this.state)
         
         
           <div>
-            {this.state.whichComponentToShow === "Home" ? <Home/> : null}
-            {this.state.whichComponentToShow === "Parcelles" ? <Product/> : null}
+            {manage}
             </div>
         
       </main>
