@@ -156,12 +156,9 @@ const {classes} = this.props;
       </Drawer>
       <main className={classes.content} style={{justify: "center"}}>
         <div className={classes.toolbar} />
-        
-        
           <div>
             {manage}
-            </div>
-        
+          </div>
       </main>
     </div>
   );

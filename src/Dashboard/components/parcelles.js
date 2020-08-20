@@ -2,6 +2,8 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Fade from 'react-reveal/Fade';
+import ParcellesLines from './parcellesProduct'
+import Planches from './CalcPlanches';
 
 //dataimport 
 
@@ -10,7 +12,11 @@ import item from '../GlobalData'
 const useStyles = makeStyles({
     root: {
         width: "100%",
-        textAlign: "center"
+        textAlign: "center",
+        marginTop: 100,
+    },
+    table: {
+        width: 1000,
     }
 });
 
@@ -53,8 +59,8 @@ export default function ParcellesList () {
     const data = renderData();
 
     return (
-        <Grid container justify="center">
-            <table className={classes.root} >
+        <Grid className={classes.root}  container justify="center">
+            <table className={classes.table} >
                 <tbody>
                 <tr>
                     <td>Zone</td>
@@ -69,6 +75,8 @@ export default function ParcellesList () {
                 </tbody>
                 
             </table>
+            <ParcellesLines/>
+            <Planches/>
         </Grid>
     )
 }
