@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade';
 import ParcellesLines from './parcellesProduct'
 import Planches from './CalcPlanches';
 
+
 //dataimport 
 
 import item from '../GlobalData'
@@ -17,6 +18,13 @@ const useStyles = makeStyles({
     },
     table: {
         width: 1000,
+    },
+    pla: {
+        width: "40%",
+        height: 200,
+    },
+    x: {
+        width: "60%"
     }
 });
 
@@ -76,7 +84,12 @@ export default function ParcellesList () {
                 
             </table>
             <ParcellesLines/>
-            <Planches/>
+            <Grid className={classes.pla}>
+                <Planches/>
+            </Grid>
+            <Grid className={classes.x}>
+
+            </Grid>
         </Grid>
     )
 }
