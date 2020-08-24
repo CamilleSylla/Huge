@@ -60,7 +60,7 @@ class Planches extends React.Component{
       }
       onParChange = (event) => {
         this.state.userXY.t = event.target.value;
-        console.log(this.state.userXY.y)
+        console.log(this.state.userXY.t)
       }
 
     render () {
@@ -76,6 +76,7 @@ class Planches extends React.Component{
         
         const classes = useStyles();
         const data = renderData();
+        let surface = this.state.userXY.t;
             return (
                 <Grid>
                     <Typography>Calculer le nombre de planches maximum d'une parcelle</Typography>
@@ -88,6 +89,7 @@ class Planches extends React.Component{
                         >{data}
                         </Select>
                     </FormControl>
+            <Typography> Surface Total (m²) : {surface}</Typography>
                     <br/>
                     <TextField id="standard-basic" label="Longueur" onChange={this.onLongueurChange} />
                     <TextField id="standard-basic" label="Largeur" onChange={this.onLargeurChange} />
