@@ -11,6 +11,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 
 import item from '../GlobalData';
+import { debounce } from '@material-ui/core';
 
 const useStyles = theme =>({
     root: {
@@ -24,17 +25,16 @@ const useStyles = theme =>({
       },
 });
 
+
 function renderData() {
     return item.production.map((production, i) => {
         const {parcelle, produit, total, utilise, semi, recolte } = production
-     
-            return (
-            <MenuItem value={total}>{parcelle}</MenuItem>
-                
-            ) 
+        const db = { parcelle, total }    
+        return (db)
         
     }); 
 };
+
 
 class Planches extends React.Component{
     state ={
@@ -44,6 +44,7 @@ class Planches extends React.Component{
             x: '',
             y: ''
         },
+        dropdown: renderData(),
       }
 
     parc=item;
@@ -75,8 +76,9 @@ class Planches extends React.Component{
         }
         
         const classes = useStyles();
-        const data = renderData();
+        const data = this.state.dropdown;
         let surface = this.state.userXY.t;
+        console.log(data)
             return (
                 <Grid>
                     <Typography>Calculer le nombre de planches maximum d'une parcelle</Typography>
@@ -86,7 +88,12 @@ class Planches extends React.Component{
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         onChange={this.onParChange}
-                        >{data}
+                        value={this.state.dropdown}
+                        >{data.map((item) => (
+                            <MenuItem key={item.parcelle} value={item.total} >
+                                {item.parcelle}
+                            </MenuItem>
+                        ))}
                         </Select>
                     </FormControl>
             <Typography> Surface Total (m²) : {surface}</Typography>
