@@ -18,10 +18,9 @@ const useStyles = theme =>({
         width: "100%",
         textAlign: "center",
     },
-    formControl: {
-        width: "100%"
-      },
-      selectEmpty: {
+      gridMarg: { 
+          marginTop: 50,
+          marginBottom: 50
       },
 });
 
@@ -81,31 +80,46 @@ class Planches extends React.Component{
         console.log(data)
             return (
                 <Grid>
-                    <Typography>Calculer le nombre de planches maximum d'une parcelle</Typography>
-                    <FormControl className={classes.formControl}>
-                        <InputLabel id="demo-simple-select-label">Mes Parcelles</InputLabel>
-                        <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        onChange={this.onParChange}
-                        value={this.state.dropdown}
-                        >{data.map((item) => (
-                            <MenuItem key={item.parcelle} value={item.total} >
-                                {item.parcelle}
-                            </MenuItem>
-                        ))}
-                        </Select>
-                    </FormControl>
-            <Typography> Surface Total (m²) : {surface}</Typography>
-                    <br/>
-                    <TextField id="standard-basic" label="Longueur" onChange={this.onLongueurChange} />
-                    <TextField id="standard-basic" label="Largeur" onChange={this.onLargeurChange} />
-                    <Button variant="contained" color="primary" onClick={() => {this.setState({show: "true"}); 
-                         console.log(this.state.show);
-                         }}>
-                    Primary
-                    </Button>
-            {lol}
+                    <Grid style={{marginTop: 25}}>
+                        <Typography>Calculer le nombre de planches maximum d'une parcelle</Typography>
+                    </Grid>
+                    <Grid style={{marginTop: 25}}>
+                        <FormControl style={{minWidth: 200}}>
+                            <InputLabel htmlFor="data" >Mes Parcelles</InputLabel>
+                            <Select 
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            onChange={this.onParChange}
+                            value={this.state.dropdown}
+                            >{data.map((item) => (
+                                <MenuItem key={item.parcelle} value={item.total} >
+                                    {item.parcelle}
+                                </MenuItem>
+                            ))}
+                            </Select>
+                        </FormControl>
+                    </Grid>
+                    <Grid style={{marginTop: 25}}>
+                        <Typography> Surface Total (m²) : {surface}</Typography>
+                    </Grid>
+                    <Grid style={{marginTop: 25}}>
+                        <TextField id="standard-basic" label="Longueur" onChange={this.onLongueurChange} />
+                    </Grid>
+                    
+                    <Grid style={{marginTop: 25}}>
+                        <TextField id="standard-basic" label="Largeur" onChange={this.onLargeurChange} />
+                    </Grid>
+                    
+                    <Grid style={{marginTop: 25}}>
+                        <Button variant="contained" color="primary" onClick={() => {this.setState({show: "true"}); 
+                            console.log(this.state.show);
+                            }}>
+                        Calculer
+                        </Button>
+                    </Grid>
+                   <Grid style={{marginTop: 25}}>
+                        {lol}
+                   </Grid>
                 </Grid>
             )
         }
