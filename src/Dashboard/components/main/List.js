@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 
 //dataimport 
 
-import item from './GlobalData'
+import item from '../../GlobalData'
 
 const useStyles = makeStyles({
     root: {

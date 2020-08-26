@@ -11,14 +11,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Button from '@material-ui/core/Button';
-import Timeline from './Contribution';
-import Lines from './Lines';
-import Product from './Product';
-import Cards from './Cards'
-import Grid from '@material-ui/core/Grid';
-import ItemList from './List';
-import Home from './Home'
-import ParcellesList from './components/parcelles'
+import Home from './components/main/Home'
+import ParcellesList from './components/Parcelles/parcelles'
 
 //side bar list icone
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';

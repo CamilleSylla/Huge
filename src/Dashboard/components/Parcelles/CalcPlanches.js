@@ -10,7 +10,7 @@ import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 
-import item from '../GlobalData';
+import item from '../../GlobalData';
 import { debounce } from '@material-ui/core';
 
 const useStyles = theme =>({
@@ -90,7 +90,7 @@ class Planches extends React.Component{
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
                             onChange={this.onParChange}
-                            value={this.state.dropdown}
+                            value={data.parcelle}
                             >{data.map((item) => (
                                 <MenuItem key={item.parcelle} value={item.total} >
                                     {item.parcelle}

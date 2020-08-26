@@ -5,7 +5,7 @@
 
   //dataimport 
 
-import item from './GlobalData'
+import item from '../../GlobalData'
 
 function renderData() {
   return item.production.map((production, i) => {

@@ -7,7 +7,7 @@ import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import AccessibilityIcon from '@material-ui/icons/Accessibility';
 
-import item from './GlobalData'
+import item from '../../GlobalData'
 
 const useStyles = makeStyles({
     root: {

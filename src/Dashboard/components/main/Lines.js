@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
-import item from './GlobalData';
+import item from '../../GlobalData';
 
 function renderData() {
   return item.production.map((production, i) => {
