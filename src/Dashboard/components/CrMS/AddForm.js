@@ -10,12 +10,11 @@ import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
 const useStyles = theme => ({
     root: {
-      marginTop: 100,
+      
     },
 
   }
-)
-;
+);
 
 
 class Add extends React.Component {
