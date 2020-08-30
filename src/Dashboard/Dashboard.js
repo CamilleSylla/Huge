@@ -13,11 +13,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Button from '@material-ui/core/Button';
 import Home from './components/main/Home'
 import ParcellesList from './components/Parcelles/parcelles'
+import CMS from './components/CrMS/main'
 
 //side bar list icone
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import ListAltRoundedIcon from '@material-ui/icons/ListAltRounded';
-import PostAddRoundedIcon from '@material-ui/icons/PostAddRounded';
+import StorageIcon from '@material-ui/icons/Storage';
 import HelpOutlineRoundedIcon from '@material-ui/icons/HelpOutlineRounded';
 
 // animation
@@ -100,6 +101,8 @@ if (this.state.whichComponentToShow === "Home") {
   manage = <Fade left><Home/></Fade>
 } else if (this.state.whichComponentToShow === "Parcelles") {
   manage = <ParcellesList/>
+}else if (this.state.whichComponentToShow === "cms") {
+  manage = <CMS/>
 }
 
 const {classes} = this.props;
@@ -136,6 +139,12 @@ const {classes} = this.props;
                   }}>
             <ListAltRoundedIcon/>
              Mes Parcelles
+             </Button>
+             <Button onClick={() => {
+                  this.setState({whichComponentToShow: "cms"}); console.log(this.state)
+                  }}>
+            <StorageIcon/>
+             Crée/Modifier/Supprimé
              </Button>
         </List>
         <Divider />
