@@ -67,7 +67,7 @@ class Delete extends React.Component {
         
             <Grid className={classes.root}>
                 <Typography  variant="h6" noWrap>
-                        Modification de Parcelle
+                        Suppression de parcelle
                 </Typography>
                 <Grid>
                 <FormControl style={{minWidth: 200}}>

@@ -1,14 +1,15 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
 
 //Material UI
 import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 
 //component
 import Add from './AddForm';
 import Modify from './Modify';
 import Delete from './Delete';
-
+import ParTab from './parTab';
+import CircPro from './CircPro';
 //animation
 import Fade from 'react-reveal/Fade';
 
@@ -36,6 +37,11 @@ class CMS extends React.Component {
                         <Modify className={classes.formSpacing}/>
                         <Delete className={classes.formSpacing}/>
                     </Grid>
+                    <Grid container justify="center">
+                        <ParTab/>
+                        <CircPro/>
+                    </Grid>
+                    
                 </Grid>
             </Fade>
         )
