@@ -19,6 +19,9 @@ const useStyles = theme => ({
     root: {
       marginLeft: 50,
     },
+    btn: {
+        marginTop: 25,
+    }
     
 
   }
@@ -94,7 +97,7 @@ class Modify extends React.Component {
                     </Grid>
                 </Grid>
                 <Grid>
-                    <Button variant="contained" color="primary">
+                    <Button className={classes.btn} variant="contained" color="primary">
                         <CreateIcon/>
                         Modifier
                     </Button>

@@ -12,6 +12,9 @@ const useStyles = theme => ({
     root: {
       
     },
+    btn: {
+        marginTop: 25,
+    }
 
   }
 );
@@ -58,7 +61,7 @@ class Add extends React.Component {
                             />
                     </Grid>
                     <Grid>
-                    <Button variant="contained" color="primary">
+                    <Button className={classes.btn} variant="contained" color="primary">
                         <AddCircleOutlineIcon/>
                         Ajouter
                     </Button>

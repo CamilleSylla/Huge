@@ -19,6 +19,9 @@ const useStyles = theme => ({
     root: {
         marginLeft: 50,
       },
+      btn: {
+        marginTop: 25,
+    }
 
   }
 );
@@ -45,6 +48,7 @@ class Delete extends React.Component {
             name: '',
             total: '',
         }
+        
     }
 
       onCreateTotalChange = (event) => {
@@ -84,7 +88,7 @@ class Delete extends React.Component {
                 </FormControl>
                 </Grid>
                 <Grid>
-                    <Button variant="contained" color="primary">
+                    <Button className={classes.btn} variant="contained" color="primary">
                         <DeleteIcon/>
                         supprimer
                     </Button>
