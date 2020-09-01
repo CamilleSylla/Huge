@@ -11,7 +11,8 @@ import Modify from './Modify';
 import Delete from './Delete';
 import ParTab from './parTab';
 import CircPro from './CircPro';
-import AddProduct from './AddProduct'
+import AddProduct from './AddProduct';
+import ModProd from './ModProd';
 //animation
 import Fade from 'react-reveal/Fade';
 
@@ -59,6 +60,7 @@ class CMS extends React.Component {
                 </Grid>
                 <Grid className={classes.containerForm} container justify="center">
                         <AddProduct/>
+                        <ModProd/>
                 </Grid>
             </Fade>
         )

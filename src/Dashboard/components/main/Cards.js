@@ -1,9 +1,11 @@
 import React from 'react';
+
+//Material UI
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
-import ImportContactsIcon from '@material-ui/icons/ImportContacts';
+import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import AccessibilityIcon from '@material-ui/icons/Accessibility';
 
@@ -49,7 +51,7 @@ const classes = useStyles();
         <Grid className={classes.root} container justify="center">
             <Grid className={classes.allCards}>
                 <Card>
-                    <ImportContactsIcon/>
+                    <WbSunnyIcon/>
                 </Card>
             </Grid>
             <Grid className={classes.allCards}>
