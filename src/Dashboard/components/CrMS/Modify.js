@@ -22,8 +22,6 @@ const useStyles = theme => ({
     btn: {
         marginTop: 25,
     }
-    
-
   }
 );
 
@@ -70,22 +68,22 @@ class Modify extends React.Component {
                         Modification de Parcelle
                 </Typography>
                 <Grid>
-                <FormControl style={{minWidth: 200}}>
-                    <InputLabel htmlFor="data" >Mes Parcelles</InputLabel>
-                        <Select  labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        onChange={this.onParChange}
-                        value={data.parcelle}
-                        >
-                        {data.map((item) => (
-                        <MenuItem key={item.parcelle} value={item.parcelle} >
-                        {item.parcelle}
-                        </MenuItem>
+                    <FormControl style={{minWidth: 200}}>
+                        <InputLabel htmlFor="data" >Mes Parcelles</InputLabel>
+                            <Select  labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            onChange={this.onParChange}
+                            value={data.parcelle}
+                            >
+                            {data.map((item) => (
+                            <MenuItem key={item.parcelle} value={item.parcelle} >
+                            {item.parcelle}
+                            </MenuItem>
+                                    )
                                 )
-                            )
-                        }
-                        </Select>
-                </FormControl>
+                            }
+                            </Select>
+                    </FormControl>
                 </Grid>
                 <Grid>
                     <Grid>

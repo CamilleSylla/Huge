@@ -3,6 +3,7 @@ import React from 'react';
 //Material UI
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 //data
 import item from '../../GlobalData';
@@ -31,6 +32,9 @@ function renderData() {
                     </Fade>
                     <Fade right>
                         <td>{total}</td>
+                    </Fade>
+                    <Fade left>
+                        <td><DeleteIcon/></td>
                     </Fade>
                 </tr>
                 

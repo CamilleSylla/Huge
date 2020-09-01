@@ -17,27 +17,31 @@ function renderCirc() {
         console.log(r)
         if (new Date () <= new Date (recolte) && new Date >= new Date (semi)) {
             return (
-                <Grid display="inline-flex">
-                    <Typography>
-                        {parcelle}   
-                    </Typography> 
-                    <Box position="relative" display="inline-flex"> 
-                      <CircularProgress variant="static" value={r} />
-                      <Box
-                        top={0}
-                        left={0}
-                        bottom={0}
-                        right={0}
-                        position="absolute"
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
-                      >
-                        <Typography variant="caption" component="div" color="textSecondary">
-                            {`${Math.round(r,)}%`}
-                        </Typography>
-                      </Box>
-                    </Box>
+                <Grid>
+                    <Grid>
+                        <Typography>
+                            {parcelle}   
+                        </Typography> 
+                    </Grid>
+                    <Grid>
+                        <Box position="relative" display="inline-flex"> 
+                        <CircularProgress variant="static" value={r} />
+                        <Box
+                            top={0}
+                            left={0}
+                            bottom={0}
+                            right={0}
+                            position="absolute"
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                        >
+                            <Typography variant="caption" component="div" color="textSecondary">
+                                {`${Math.round(r,)}%`}
+                            </Typography>
+                        </Box>
+                        </Box>
+                    </Grid>
                 </Grid>
             ) 
         }  
